@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">SIGN_IN</span>
+  </nav>
+  <hr>
+  <hr>
+<div class='container'>
+<div class='col-md-12'>
+    <form #signUpForm="ngForm" (ngSubmit)="login()">
+            
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name="newEmail" [(ngModel)]="newEmail" #email="ngModel"
+                required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type='password' class="form-control" name="newPassword" [(ngModel)]="newPassword"
+                #password='ngModel' placeholder='password' required>
+        </div>
+        
+
+        <button type="submit" class="btn btn-success" >Sign-in</button>
+        <button type="submit" class="btn btn-primary" (click)="goToSignup()">Sign-up</button>
+    </form>
+</div>
+</div>
+
