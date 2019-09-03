@@ -18,7 +18,7 @@ export class SocketService {
   public verifyUser = () => {
     return Observable.create((observer) => {
 
-      this.socket.on('verifyuser', (data) => {
+      this.socket.on('verifyUser', (data) => {
         observer.next(data);
       });
     });
